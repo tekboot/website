@@ -1,0 +1,42 @@
+<section class="section-pb-space section-pt-space  help-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="intro-part">
+                    <div class="title">
+                        <h2>TekBoot hub</h2>
+                        <p>A living mindmap of our consultants skills and projects—where performnce and curiosity meets
+                            structured
+                            progress.</p>
+                    </div>
+                    <div class="contact-img">
+                        <img src="../../assets/svg/hire.svg" class="img-fluid blur-up lazyload" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="career-perks">
+                    <div class="row">
+                        <div class="col-md-6" *ngFor="let skill of skills">
+                            <app-career-topic [skill]="skill"> </app-career-topic>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- faq section end -->
+
+
+<!-- popular topics section start -->
+<section class="section-pb-space career-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-md-6" *ngFor="let job of jobs">
+                <app-career-box [job]="job"></app-career-box>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- popular topics section end -->

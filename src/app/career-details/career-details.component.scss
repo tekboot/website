@@ -1,0 +1,43 @@
+img {
+    width: 100%; /* Make the image take the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 800px; /* Optional: Set a maximum width */
+    display: block; /* Prevent inline element spacing issues */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+  
+
+  .content-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 16px; /* Adds space between image and text */
+  }
+  
+  .image-container {
+    flex: 1; /* The image takes up available space */
+    max-width: 50%; /* Limit image to 50% of the container width */
+  }
+  
+  .text-container {
+    flex: 1; /* The text takes up the remaining space */
+    max-width: 50%; /* Limit text to 50% of the container width */
+  }
+  
+  img {
+    width: 100%; /* Scale the image proportionally */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Optional: Rounded corners */
+  }
+  
+  @media (max-width: 768px) {
+    .content-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center-align items */
+    }
+  
+    .image-container,
+    .text-container {
+      max-width: 100%; /* Full-width on smaller screens */
+    }
+  }
+  

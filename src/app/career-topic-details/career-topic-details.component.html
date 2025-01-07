@@ -1,0 +1,29 @@
+<!-- popular topics section start -->
+<section class="section-pt-space section-pb-space popular-topics">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="title">
+                    <h3>{{ skillName }}</h3>
+                </div>
+            </div>
+            <ng-container *ngFor="let skill of skillsList">
+                <div class="col-lg-4 col-md-6">
+                    <div class="topic-box">
+                        <a href="#" class="icon">
+                            <img src="{{skill.src}}" class="img-fluid blur-up lazyload" alt="">
+                        </a>
+                        <div class="topic-content">
+                            <a href="#">
+                                <h4>{{skill.name}}</h4>
+                                <br>
+                            </a>
+                            <p *ngFor="let tech of skill?.description">✓ {{ tech }}</p>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</section>
+<!-- popular topics section end -->

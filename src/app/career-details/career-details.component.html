@@ -1,0 +1,118 @@
+<!-- article section start -->
+<section class="section-pt-space section-pb-space article-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 order-lg-1">
+                <div class="article-part">
+                    <div class="main-title">
+                        <h2>{{ project?.name }}</h2>
+                    </div>
+                    <div class="content">
+                        <p>{{ project?.description }}
+                        </p>
+                        <ul>
+                            <li *ngFor="let tech of project?.technologies">{{ tech }}</li>
+
+                        </ul>
+                    </div>
+                    <div class="sub-title">
+                        <h3>step: 1 Create Friendbook Account</h3>
+                    </div>
+                    <div class="content">
+                        <p>When you create a Friendbook Account, we ask for some personal info. By providing
+                            accurate info, you can help keep your account secure and make our services more useful.
+                        </p>
+                        <div class="accordion theme-accordion accordion-sm" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Roles in the Project
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample" *ngFor="let role of project?.roles">
+                                    <div class="card-body">
+                                        {{ role }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Missions
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample" *ngFor="let mission of project?.missions">
+                                    <div class="card-body">
+                                        {{ mission }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            Check where email notifications are sent
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample" *ngFor="let achievement of project?.achievements">
+                                    <div class="card-body">
+                                        {{ achievement }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inner-title">
+                            <h4>Background </h4>
+                        </div>
+                        <ol>
+                            <li *ngFor="let background of project?.backgrounds">{{ background }}</li>
+
+                        </ol>
+                    </div>
+                    <div class="sub-title">
+                        <h3>step: 2 Protect your account with recovery info</h3>
+                    </div>
+                    <div class="content mb-0">
+                        <p>If you forget your password or someone is using your account without your permission,
+                            updated recovery info makes it much more likely you’ll get your account back.
+                        </p>
+                        <ul>
+                            <li *ngFor="let step of project?.steps">{{ step }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="article-sidebar sticky-cls-top theme-card">
+                    <div class="sidebar-title">
+                        <h3>Related topics</h3>
+                    </div>
+                    <ul>
+                        <li class="active" *ngFor="let topic of project?.relatedTopics">
+                            <a href="{{ topic.link }}">
+                                <i data-feather="file-text"></i>
+                                <h6>{{ topic.title }}</h6>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- article section end -->

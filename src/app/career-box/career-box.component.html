@@ -1,0 +1,21 @@
+<div class="career-box">
+    <a>
+        <h4>{{ job.title }}</h4>
+    </a>
+    <p>{{ job.description }}</p>
+    <div class="requirement-sec">
+        <h6>{{ job.backend }}</h6>
+        <h6>{{ job.frontend }}</h6>
+        <h6>{{ job.integration }}</h6>
+        <h6>{{ job.database }}</h6>
+    </div>
+    <div class="button-sec row">
+        <div class="col-6">
+            <a [routerLink]="job.routerLink" class="btn btn-solid d-block">Project details</a>
+        </div>
+        <div class="col-6">
+            <a routerLink="/career-details" class="btn btn-light d-block">GitHub </a>
+
+        </div>
+    </div>
+</div>
